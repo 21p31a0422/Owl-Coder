@@ -22,5 +22,4 @@ int main() {
         if(ocount % 3 != 0) ans = ans | (1 << i);
     }
     cout << ans << endl;
-    return 0;
 }
