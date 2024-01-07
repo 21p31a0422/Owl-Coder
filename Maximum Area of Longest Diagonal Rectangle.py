@@ -38,28 +38,28 @@
 
 
 from math import sqrt
-class Solution:
-    def areaOfMaxDiagonal(self, dimensions: List[List[int]]) -> int:
-        
-        def myFun(arr):
-            return sqrt(arr[0] * arr[0] + arr[1] * arr[1])
-        
-        def area(arr):
-            return arr[0] * arr[1]
-        
-        index_array, diag = [0], myFun(dimensions[0])
-        for i in range(1, len(dimensions)):
-            tmp = myFun(dimensions[i])
-            if diag < tmp:
-                diag = tmp
-                index_array = [i]
-            elif diag == tmp:
-                index_array.append(i)
-        
-        if len(index_array) == 1:
-            return dimensions[index_array[0]][0] * dimensions[index_array[0]][1]
-        
-        mx = 0
-        for j in range(len(index_array)):
-            mx = max(mx, area(dimensions[index_array[j]]))
-        return mx
+# class Solution:
+    # def areaOfMaxDiagonal(self, dimensions: List[List[int]]) -> int:
+def areaOfMaxDiagonal(dimensions):
+    def myFun(arr):
+        return sqrt(arr[0] * arr[0] + arr[1] * arr[1])
+    
+    def area(arr):
+        return arr[0] * arr[1]
+    
+    index_array, diag = [0], myFun(dimensions[0])
+    for i in range(1, len(dimensions)):
+        tmp = myFun(dimensions[i])
+        if diag < tmp:
+            diag = tmp
+            index_array = [i]
+        elif diag == tmp:
+            index_array.append(i)
+    
+    if len(index_array) == 1:
+        return dimensions[index_array[0]][0] * dimensions[index_array[0]][1]
+    
+    mx = 0
+    for j in range(len(index_array)):
+        mx = max(mx, area(dimensions[index_array[j]]))
+    return mx
