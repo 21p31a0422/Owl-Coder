@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Algo - Prefix
+// Algo - Prefix 
 
 int equilibriumIndex(int n, vector<int> &arr){
     int pre = 0;
