@@ -13,7 +13,7 @@ int BE(int a, int b){
             a = a * a;
 
         }
-    }
+    } 
     return ans;
 }
 int inverse(int b){
