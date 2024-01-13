@@ -1,8 +1,7 @@
 class Solution {
 public:
     int minSteps(string s, string t) {
-        // map<int, int> ref;
-        vector<int>ref(26,0);
+        map<int, int> ref;
         for(int i=0;i<s.size();i++)
         {
             ref[s[i]-'a']++;
@@ -16,7 +15,7 @@ public:
         // }
         int res = 0;
         for (auto it : ref) {
-            res+=abs(it);
+            res+=abs(it.second);
         }
         return res/2;
     }
