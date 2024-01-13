@@ -15,8 +15,8 @@ public:
         //     ref[it]--;
         // }
         int res = 0;
-        for (auto it : ref) {
-            res+=abs(it);
+        for (int i=0;i<ref.size();i++) {
+            res+=abs(ref[i]);
         }
         return res/2;
     }
