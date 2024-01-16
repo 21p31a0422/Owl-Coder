@@ -15,7 +15,6 @@ int main(){
         for(int i = 0; i < n; i++){
             if ((s[i] == '1') && (f[i] == '0')) rem++;
             if ((s[i] == '0') && (f[i] == '1')) add++;
-        }
-        cout << max(rem, add) << '\n';
+        } cout << max(rem, add) << '\n';
     }
 }

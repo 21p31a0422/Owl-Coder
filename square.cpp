@@ -19,8 +19,6 @@ int main(){
         } else {
             diag1 = sqrt((x4 - x1) * (x4 - x1) + (y4 - y1) * (y4 - y1));
         }
-        // diag1 = sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1));
-        // diag2 = sqrt((x4 - x2) * (x4 - x2) + (y4 - y2) * (y4 - y2));
         cout << (diag1 * diag1) << '\n';
     }
 }
