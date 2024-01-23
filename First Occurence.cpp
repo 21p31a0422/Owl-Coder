@@ -4,12 +4,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool First_Occur(int *arr, int n, int key) {
+int First_Occur(int* arr, int n, int key) {
     if (n == 0) return -1; // base case
     if (arr[0] == key) return 0;  // when key is met
-    int smallAns = First_Occur(arr + 1, n - 1, key); // breaking into small pblms
-    if (smallAns == -1) return -1; // if key is not found
-    else return smallAns + 1; // increment 1 in every call
+    int smallAns = First_Occur(arr+1, n-1, key);// breaking into small pblms
+    if (smallAns<0) return smallAns; // if key is not found
+    return 1+smallAns; // increment 1 in every call
 }
 
 int main(){
