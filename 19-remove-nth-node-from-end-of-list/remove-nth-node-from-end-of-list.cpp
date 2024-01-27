@@ -20,15 +20,12 @@ public:
         }
         if (p2 == NULL) {
             return p1->next;
-            // return p1;
         }
         while (p2->next != NULL ) {
             p1 = p1->next; 
             p2 = p2->next;
         }
-        // p1->next = (p2->next == NULL && p1->next != NULL) ? NULL : p1->next->next;
         p1->next = p1->next->next;
-        // p2 = NULL;
         return head;
     }
 };
