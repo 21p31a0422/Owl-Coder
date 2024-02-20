@@ -1,9 +1,10 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        int numTotal = 0, ln = nums.size();
-        for(int i = 0; i < ln; i++) {
-            numTotal += nums[i];
-        } return (((ln * (ln + 1)) / 2) - numTotal);
+        int ori = 0, given = 0;
+        for(int i = 0; i < nums.size(); i++) {
+            given += nums[i];
+            ori += (i + 1);
+        } return (ori - given);
     }
 };
