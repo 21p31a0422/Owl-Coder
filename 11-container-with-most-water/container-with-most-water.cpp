@@ -9,8 +9,6 @@ public:
             } else {
                 j--;
             }
-        }
-        // water = max(water, ((j - i) * min(height[i], height[j])));
-        return water;
+        } return water;
     }
 };
