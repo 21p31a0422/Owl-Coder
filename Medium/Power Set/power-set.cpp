@@ -6,17 +6,14 @@ using namespace std;
 class Solution{
 	public:
 		vector<string> AllPossibleStrings(string s){
-		    vector<string> result;
-		    string tmp = "";
-		    int ln = s.length();
-		    int power = (1 << ln);
-		    for (int i = 1; i < power; i++) {
-		        tmp = "";
-		        for (int j = 0; j < ln; j++) {
-		            if (i & (1 << j)) tmp += s[j];
-		        } result.push_back(tmp);
-		    } sort(result.begin(), result.end());
-		    return result;
+		    vector<string> res;
+		    for(int i = 1; i < (1 << s.size()); i++){
+		        string seq = "";
+		        for(int j = 0; j < s.size(); j++){
+		            if ((1 << j) & i) seq += s[j];
+		        } res.push_back(seq);
+		    } sort(res.begin(), res.end());
+		    return res;
 		}
 };
 
